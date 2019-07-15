@@ -1,0 +1,10 @@
+<!--compnonents/tree/tree.wxml-->
+<view wx:for="{{treeList}}" wx:for-item="item" wx:for-index="idx" wx:key="">
+  <view wx:if="{{item.checked==true}}" class='tree-item-inner {{item.id==selectedNodeId? "tree-checked":""}}' style='padding-left:{{20*(item.rank+1)}}rpx'
+    id='{{item.id}}' catchtap='selectNode'>
+       <image class="contact-avatar" src="{{item.id==selectedNodeId? '../../images/main/group_last_selected.png':'../../images/main/group_last.png'}}" id='{{item.id}}'></image>      
+          <text id='{{item.id}}'> {{item.name}}  </text>     
+           <button  wx:if="{{item.id!=selectedNodeId}}" type="primary"  id='{{item.id}}' data-name='{{item.name}}' class='btn-choose'  catchtap="chooseNode">选择</button>
+  </view>
+ 
+</view>

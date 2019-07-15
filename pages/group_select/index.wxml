@@ -1,0 +1,13 @@
+<!--index.wxml-->
+ <view class="unread">
+ <image src="../../images/main/group.png"></image>
+    <text>选择工作单位</text>    
+  </view>
+ <view class="group-bottom"> 
+      <button class="btn-save"  catchtap='btnSave'>确定</button>
+        <button  type="default"  bindtap="btnCancel">取消</button>
+  </view>   
+
+<scroll-view scroll-y="true" class="container message tree-top">
+ <tree id="treebar"  value="{{treeData}}" >{{treebar}}</tree>
+</scroll-view>

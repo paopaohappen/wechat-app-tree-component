@@ -1,0 +1,18 @@
+<view class="login-container">
+  <view class='logo-view'>
+    <image src="/images/main/logo.png" class="logo" mode="widthFix"></image>
+    <text class='login-title'>用户登录</text>
+  </view>
+  <form bindsubmit="formSubmit">  
+    
+    <view class='section'>
+      <input class="input verification" name="GroupId" value='{{groupNm}}' placeholder="请选择单位" placeholder-class="input-placeholder"  />
+      <button  size="mini" class='verification-btn' plain="true"  hover-class="btn-hover"   catchtap="chooseGroup">选择单位  </button>
+    </view>
+   
+    <view>
+      <button formType="submit" size="mini" plain="true" class="login-btn" hover-class="other-button-hover" hover-class="btn-hover"> 登 录 </button>
+    </view>
+ 
+  </form>
+</view>
